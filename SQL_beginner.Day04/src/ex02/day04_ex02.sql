@@ -1,0 +1,4 @@
+CREATE VIEW v_generated_dates AS
+SELECT gd::DATE AS generated_date
+FROM  GENERATE_SERIES('2022-01-01'::DATE, '2022-01-31'::DATE, INTERVAL '1 day') gd
+ORDER BY 1;
